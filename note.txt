@@ -1,0 +1,64 @@
+# django install
+pip install django
+
+# check django version
+python -m django --version
+
+# starting project
+django-admin startproject ပေးချင်တဲ့ pjname
+django-admin startporject wpj1
+
+# cd into ပေးခဲ့တဲ့pjname
+cd wpj1
+
+# show files and folder
+dir or ls
+
+# creat application
+
+- module
+    - pj (Facebook)
+        - app (Facebookpost) (mesenger) (instagram)
+            - modal
+
+# ready or not! server run
+python manage.py runserver
+
+# server stop
+ctrl + c
+
+# create application
+python manage.py startapp ပေးချင်တဲ့appname
+python manage.py startapp record
+
+-> module (django)
+    -> PJ (wpj1)
+        -> APP (redord)
+            -> Modal (models.py)
+
+-> File and Folder Expression
+-> wpj1 (pj)
+    -> record (app)
+        -> admin.py
+        -> models.py
+    -> wpj1 (pj setting folder)
+        -> settings.py
+    -> db.sqlite3
+    -> manage.py (server)
+
+# register app in pj settings , Install App
+
+# set up database file in django
+python manage.py migrate
+
+# create models
+class Record(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+    date = models.DateField()
+
+# make migrations
+python manage.py makemigrations
+
+# migrate
+python manage.py migrate
